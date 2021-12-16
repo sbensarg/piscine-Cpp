@@ -2,39 +2,38 @@
 #include <iostream>
 #include <iomanip>
 
-Contact::Contact()
-{
-}
-Contact::Contact(std::string f, std::string l, std::string n, std::string phn, std::string ds)
-{
-	this->_first_name = f;
-	this->_last_name = l;
-	this->_nickname = n;
-	this->_phone_nbr = phn;
-	this->_darkest_secret = ds;
+// Contact::Contact()
+// {
+// }
 
-	
-}
+// Contact::Contact(std::string f, std::string l, std::string n, std::string phn, std::string ds)
+// {
+// 	this->_first_name = f;
+// 	this->_last_name = l;
+// 	this->_nickname = n;
+// 	this->_phone_nbr = phn;
+// 	this->_darkest_secret = ds;
+// }
 
-Contact::~Contact()
-{
-}
+// Contact::~Contact()
+// {
+// }
 
 std::string Contact::getFirstName(void)
 {
-	return Contact::_first_name;
+	return this->_first_name;
 }
 std::string Contact::getLastName(void)
 {
-	return Contact::_last_name;
+	return this->_last_name;
 }
 std::string Contact::getNicknam(void)
 {
-	return Contact::_nickname;
+	return this->_nickname;
 }
 std::string Contact::getDarkestSecret(void)
 {
-	return Contact::_darkest_secret;
+	return this->_darkest_secret;
 }
 
 void Contact::setFirstName(std::string f) {
@@ -59,11 +58,11 @@ void Contact::setDarkestSecret(std::string d) {
 	return ;
 }
 
-std::string  Contact::_first_name = "";
-std::string  Contact::_last_name = "";
-std::string  Contact::_nickname = "";
-std::string  Contact::_phone_nbr = "";
-std::string  Contact::_darkest_secret = "";
+// std::string  Contact::_first_name = "";
+// std::string  Contact::_last_name = "";
+// std::string  Contact::_nickname = "";
+// std::string  Contact::_phone_nbr = "";
+// std::string  Contact::_darkest_secret = "";
 
 
 // void Contact::print_detail(int i)

@@ -15,8 +15,8 @@ int main(void)
 	std::string phn;
 	std::string ds;
 
-	Contact insContact[8];
-//	PhoneBook insPhonebook(insContact);
+	// Contact insContact[8];
+	PhoneBook insPhonebook;
 	while (1 && ! std::cin.eof())
 	{
 		std::cout << ">>: ";
@@ -25,38 +25,7 @@ int main(void)
 		{
 			if (i < 8)
 			{
-				Contact contact;
-				std::cout << "First name: ";
-				std::cin >>fname;
-				//insContact[i].setFirstName(fname);
-				std::cout << "Last name: ";
-				std::cin >>lname;
-				//insContact[i].setLastName(lname);
-				std::cout << "Nickname: ";
-				std::cin >>nname;
-			//	insContact[i].setNickname(nname);
-				std::cout << "Phone number: ";
-				std::cin >>phn;
-			//	insContact[i].setPhonenbr(phn);
-				std::cout << "Darkest secret : ";
-				std::cin >>ds;
-			//	insContact[i].setDarkestSecret(ds);
-				//std::cout << fname << " " << lname << " " << nname << " "<< std::endl;
-			//	std::cout << "i " << i << std::endl;
-				contact.setFirstName(fname);
-				insContact[i] = contact;
-				
-			//	insPhonebook.addContact(&insContact[i]);
-
-				
-				int k = 0 ;
-				while(k <= i)
-				{
-					std::cout << insContact[k].getFirstName() << std::endl;
-					std::cout << insContact[k].getLastName() << std::endl;
-					k++;
-				}
-				//break;
+				insPhonebook.addContact();
 				i++;
 			}
 			else
@@ -65,7 +34,7 @@ int main(void)
 		else if (std::strcmp(cmd, "SEARCH") == 0) 
 		{
 			//insPhonebook.print_tab_of_contact(i, insContact);
-		//	insPhonebook.getContacts(i);
+			insPhonebook.getContacts();
 			// int k = 0;
 			// while (k < i)
 			// {
@@ -102,6 +71,7 @@ int main(void)
 		else
 			std::cout << "Command not valid" << std::endl;
 	}
+		
 	
 	return (0);
 }

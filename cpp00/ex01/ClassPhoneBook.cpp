@@ -3,26 +3,54 @@
 
 PhoneBook::PhoneBook()
 {
-	
+	this->i = 0;	
 }
-PhoneBook::PhoneBook(Contact *c)
-{
-	this->_tab_contact = c;
-}
+// PhoneBook::PhoneBook(Contact *c)
+// {
+// 	this->_tab_contact = c;
+// }
 
 PhoneBook::~PhoneBook()
 {
 }
 
-void PhoneBook::addContact(Contact* c)
+void PhoneBook::addContact()
 {
-    this->_tab_contact = c;
+	std::string fname;
+	std::string lname;
+	std::string nname;
+	std::string phn;
+	std::string ds;
+
+	std::cout << "i  = " << this->i << std::endl;
+
+	std::cout << "First name: ";
+	std::cin >>fname;
+	this->_tab_contact[this->i].setFirstName(fname);
+	std::cout << "Last name: ";
+	std::cin >>lname;
+	this->_tab_contact[this->i].setLastName(lname);
+	std::cout << "Nickname: ";
+	std::cin >>nname;
+	this->_tab_contact[this->i].setNickname(nname);
+	std::cout << "Phone number: ";
+	std::cin >>phn;
+	this->_tab_contact[this->i].setPhonenbr(phn);
+	std::cout << "Darkest secret : ";
+	std::cin >>ds;
+	this->_tab_contact[this->i].setDarkestSecret(ds);
+	i++;
 }
-void PhoneBook::getContacts(int i) const
+
+
+
+
+void PhoneBook::getContacts()
 {
 	int k = 0;
 	std::cout <<"  index   " << "|" << " first name " << "|"  << " last name " << "|"  << " nickname " << std::endl;
-	while (k < i)
+	// printf(" i %d\n", i);
+	while (k < this->i)
 	{
 		if (this->_tab_contact[k].getFirstName().length() > 10)
 			this->_tab_contact[k].getFirstName() = this->_tab_contact[k].getFirstName().substr(0, 10) + ".";
