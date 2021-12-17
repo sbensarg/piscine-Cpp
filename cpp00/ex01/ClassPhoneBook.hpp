@@ -2,20 +2,16 @@
 #define CLASS_PHONEBOOK_H
 
 #include "ClassContact.hpp"
+#include <iomanip>
 
 class PhoneBook
 {
 	private:
 		Contact _tab_contact[8];
-		int i;
 	public:
-		PhoneBook();
-		// PhoneBook(Contact *c);
-		~PhoneBook();
-		void addContact();
-		void getContacts();
-		// void print_tab_of_contact(int i, Contact *c);
-		// void search_contact(int i);
+		void addContact(int i);
+		void getContacts(int i);
+		void search_contact(int i);
 };
 
 

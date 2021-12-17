@@ -13,13 +13,6 @@ private:
 	std::string _darkest_secret;
 	
 public:
-	// Contact();
-	// Contact(std::string f, std::string l, std::string n, std::string phn, std::string ds);
-	// ~Contact();
-
-	// void print_detail(int i);
-	// void search_contact(int i);
-
 	// Setter
     void setFirstName(std::string  s);
 	void setLastName(std::string  s);
@@ -29,14 +22,9 @@ public:
 
     // Getter
    	std::string getFirstName(void);
-	std::string getLastName(void) ;
-	std::string getNicknam(void) ;
-	std::string getDarkestSecret(void) ;
+	std::string getLastName(void);
+	std::string getNicknam(void);
+	std::string getDarkestSecret(void);
 };
-
-
-
-
-
 
 #endif
