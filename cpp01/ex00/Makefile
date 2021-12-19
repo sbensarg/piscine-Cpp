@@ -3,10 +3,11 @@ NAME = zombie
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 FLAGS = -Wall -Wextra -Werror
 CC = clang++
+CCLINUX = g++
 all: $(NAME)
 
 $(NAME):
-	@$(CC) $(FLAGS)  $(SRCS) -o $(NAME)
+	@$(CCLINUX) $(FLAGS)  $(SRCS) -o $(NAME)
 
 clean:
 	rm -f *.o
