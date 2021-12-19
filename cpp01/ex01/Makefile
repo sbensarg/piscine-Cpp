@@ -1,7 +1,8 @@
-NAME= test
-SRCS= Sample.class.cpp main.cpp
-FLAGS= -Wall -Wextra -Werror
-CC=clang++
+
+NAME = zombie
+SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
+FLAGS = -Wall -Wextra -Werror
+CC = clang++
 all: $(NAME)
 
 $(NAME):
