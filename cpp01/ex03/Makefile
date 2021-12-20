@@ -1,8 +1,7 @@
-NAME = zombie
-SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
+NAME = weapon
+SRCS = main.cpp Weapon.cpp HumanA.cppHumanB.cpp
 FLAGS = -Wall -Wextra -Werror
 CC = clang++
-CCLINUX = g++
 all: $(NAME)
 
 $(NAME):

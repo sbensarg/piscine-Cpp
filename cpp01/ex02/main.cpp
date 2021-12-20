@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/18 21:54:48 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/20 16:59:48 by sbensarg         ###   ########.fr       */
+/*   Created: 2021/12/20 17:20:14 by sbensarg          #+#    #+#             */
+/*   Updated: 2021/12/20 19:28:46 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <string>
+#include <iostream>
 
-int main(void)
+int main()
 {
-	Zombie *del;
-
-	del = newZombie("heap");
-	randomChump("stack");
-	delete del;
-};
+	std::string str = "HI THIS IS BRAIN";
+	std::string* stringPTR = &str; 
+	std::string& stringREF = str; //Reference sur str  
+	
+	std::cout << &str << " , " << stringPTR << " , " << &stringREF << std::endl;
+	
+	std::cout << str << " , " << *stringPTR << " , " << stringREF << std::endl; 
+	
+	return (0);
+}

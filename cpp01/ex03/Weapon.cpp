@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/18 21:54:48 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/20 16:59:48 by sbensarg         ###   ########.fr       */
+/*   Created: 2021/12/20 22:36:27 by sbensarg          #+#    #+#             */
+/*   Updated: 2021/12/20 22:47:38 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <string>
+#include "Weapon.hpp"
 
-int main(void)
+
+const std::string& Weapon::getType(void)
 {
-	Zombie *del;
+	return this->_type;
+}
 
-	del = newZombie("heap");
-	randomChump("stack");
-	delete del;
-};
+void Weapon::setType(std::string t)
+{
+	this->_type = t;
+}
