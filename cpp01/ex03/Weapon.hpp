@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 22:35:04 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/20 22:44:37 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/22 16:39:44 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ class Weapon
 private:
 	std::string _type;
 public:
-	const std::string& getType(void);
-	void setType(std::string t);
+	Weapon();
+	Weapon(std::string t);
+	~Weapon();
+	const std::string& getType(void) const;
+	void setType(const std::string& t);
 };
 
 

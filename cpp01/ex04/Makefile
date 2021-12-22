@@ -1,5 +1,5 @@
-NAME = weapon
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+NAME = replace
+SRCS = main.cpp
 FLAGS = -Wall -Wextra -Werror
 CC = clang++
 CCLINUX = g++
