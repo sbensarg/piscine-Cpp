@@ -1,16 +1,15 @@
 NAME = weapon
 SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = clang++
-CCLINUX = g++
+
 all: $(NAME)
 
-$(NAME):
-	@$(CCLINUX) $(FLAGS)  $(SRCS) -o $(NAME)
+$(NAME): $(SRCS)
+	@$(CC) $(FLAGS)  $(SRCS) -o $(NAME)
 
 clean:
-	rm -f *.o
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 re: fclean all

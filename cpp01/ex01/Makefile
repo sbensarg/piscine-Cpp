@@ -1,16 +1,15 @@
 NAME = zombie
 SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = clang++
-CCLINUX = g++
+
 all: $(NAME)
 
 $(NAME):
 	@$(CC) $(FLAGS)  $(SRCS) -o $(NAME)
 
 clean:
-	rm -f *.o
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 re: fclean all

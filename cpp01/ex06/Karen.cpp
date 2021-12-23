@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 00:20:39 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/23 17:36:40 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/23 17:48:48 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,51 @@ void Karen::error( void )
 	std::cout << "This is unacceptable, I want to speak to the manager now." << std::endl;
 }
 
-void Karen::complain( std::string level )
+int	Karen::findLevel(std::string input)
 {
-	std::map<std::string,void (Karen::*) (void)> mymap;
-  	std::map<std::string,void (Karen::*) (void)>::iterator it;
-
-	mymap["DEBUG"] = &Karen::debug;
-	mymap["INFO"] = &Karen::info;
-	mymap["WARNING"] = &Karen::warning;
-	mymap["ERROR"] = &Karen::error;
+	std::string s1 = "DEBUG";
+	std::string s2 = "INFO";
+	std::string s3 = "WARNING";
+	std::string s4 = "ERROR";
+	if (!input.compare(s1) || !input.compare(s2) || !input.compare(s3)  || !input.compare(s4))
+	{
+		std::map<std::string,int> mymap;
+		std::map<std::string,int>::iterator it;
+		mymap["DEBUG"] = 1;
+		mymap["INFO"] = 2;
+		mymap["WARNING"] = 3;
+		mymap["ERROR"] = 4;
+		it = mymap.find(input);
+		if (it != mymap.end())
+			return (it->second);
+	}
+	return(-1);
+}
+void Karen::complain( std::string level)
+{
+	switch (Karen::findLevel(level))
+	{
+	case 1:
+		Karen::debug();
+		Karen::info();
+		Karen::warning();
+		Karen::error();
+		break;
+	case 2:
+		Karen::info();
+		Karen::warning();
+		Karen::error();
+		break;
+	case 3:
+		Karen::warning();
+		Karen::error();
+		break;
+	case 4:
+		Karen::error();
+		break;
 	
-	it = mymap.find(level);
-	if (it != mymap.end())
-		(this->*(it->second))();
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		break;
+	}
 }

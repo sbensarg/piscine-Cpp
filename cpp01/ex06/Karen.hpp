@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 00:20:41 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/23 17:37:12 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/23 17:39:43 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <map>
+#include <string>
 class Karen
 {
 private:
@@ -26,6 +27,7 @@ public:
 	Karen();
 	~Karen();
 	void complain( std::string level );
+	int findLevel(std::string input);
 };
 
 
