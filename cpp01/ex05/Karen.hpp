@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/22 11:53:32 by chicky            #+#    #+#             */
-/*   Updated: 2021/12/23 05:37:46 by sbensarg         ###   ########.fr       */
+/*   Created: 2021/12/23 00:20:41 by sbensarg          #+#    #+#             */
+/*   Updated: 2021/12/23 02:13:03 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#ifndef KAREN_H
+#define KAREN_H
 
-HumanA::HumanA(std::string n, Weapon & w) : _name(n), _weapon(w)
-{
-	
-}
+#include <iostream>
 
-HumanA::~HumanA()
+class Karen
 {
-	
-}
+private:
+	void debug( void );
+	void info( void );
+	void warning( void );
+	void error( void );
+public:
+	Karen();
+	~Karen();
+	void complain( std::string level );
+};
 
-void HumanA::attack()
-{
-	std::cout << this->_name << " attacks with his " <<  this->_weapon.getType() << std::endl;
-}
+
+#endif

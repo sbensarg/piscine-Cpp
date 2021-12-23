@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:06:21 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/22 16:42:31 by chicky           ###   ########.fr       */
+/*   Updated: 2021/12/23 05:37:36 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ private:
 public:
 	HumanB(std::string n);
 	~HumanB();
-	void setWeapon(Weapon & w);
-	Weapon const * getWeapon(void) const;
+	void setWeapon(Weapon &w);
 	void attack();
 };
 

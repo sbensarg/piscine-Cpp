@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:06:18 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/22 16:18:06 by chicky           ###   ########.fr       */
+/*   Updated: 2021/12/23 05:37:42 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ public:
 	HumanA(std::string n, Weapon & w);
 	~HumanA();
 	void attack();
-	Weapon const & getWeapon(void) const;
 };
 
 

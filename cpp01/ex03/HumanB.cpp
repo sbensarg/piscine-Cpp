@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 11:53:28 by chicky            #+#    #+#             */
-/*   Updated: 2021/12/22 16:44:55 by chicky           ###   ########.fr       */
+/*   Updated: 2021/12/23 05:37:30 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,7 @@ void HumanB::setWeapon(Weapon & w)
 	this->_weapon = &w;
 }
 
-Weapon const * HumanB::getWeapon(void) const
-{
-	return this->_weapon;
-}
-
 void HumanB::attack()
 {
-	std::cout << this->_name << " attacks with his " << getWeapon()->getType() << std::endl;
+	std::cout << this->_name << " attacks with his " <<  this->_weapon->getType() << std::endl;
 }
