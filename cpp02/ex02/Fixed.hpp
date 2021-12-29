@@ -6,7 +6,7 @@
 /*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 23:59:54 by chicky            #+#    #+#             */
-/*   Updated: 2021/12/27 15:51:56 by chicky           ###   ########.fr       */
+/*   Updated: 2021/12/29 10:49:55 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <cmath>
+#define CHARBIT 8
 
 class Fixed
 {
@@ -48,6 +49,43 @@ public:
 	Fixed & operator ++ (void);
 	 // Overload ++ when used as postfix
 	Fixed operator ++ (int);
+	//min The static member function
+	
+	Fixed static & min(Fixed & nbr1, Fixed & nbr2)
+	{
+		if (nbr1 < nbr2)
+			return(nbr1);
+		else
+			return(nbr2);
+	}
+
+	Fixed static const & min(Fixed const & nbr1, Fixed const & nbr2)
+	{
+		if (nbr1.toFloat() < nbr2.toFloat())
+			return(nbr1);
+		else
+			return(nbr2);
+	}
+
+	Fixed static & max(Fixed & nbr1, Fixed & nbr2)
+	{
+		if (nbr1 > nbr2)
+			return(nbr1);
+		else
+			return(nbr2);
+	}
+
+	Fixed static const & max(Fixed const & nbr1, Fixed const & nbr2)
+	{
+		if (nbr1.toFloat() > nbr2.toFloat())
+			return(nbr1);
+		else
+			return(nbr2);
+	}
+	//min overload function
+
+	//max
+	//Fixed static & max(Fixed & nbr1, Fixed & nbr2);
 	 
 };
 

@@ -6,7 +6,7 @@
 /*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 23:59:56 by chicky            #+#    #+#             */
-/*   Updated: 2021/12/27 15:51:49 by chicky           ###   ########.fr       */
+/*   Updated: 2021/12/29 10:41:42 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,52 +72,52 @@ Fixed & Fixed::operator=(Fixed const & rhs)
 
 bool Fixed::operator==(Fixed const & rhs)
 {
-	return (this->_pointFixe == rhs.getRawBits());
+	return (this->toFloat() == rhs.toFloat());
 }
 
 bool Fixed::operator!=(Fixed const & rhs)
 {
-	return (this->_pointFixe != rhs.getRawBits());
+	return (this->toFloat() != rhs.toFloat());
 }
 
 bool Fixed::operator>=(Fixed const & rhs)
 {
-	return (this->_pointFixe >= rhs.getRawBits());
+	return (this->toFloat() >= rhs.toFloat());
 }
 
 bool Fixed::operator<=(Fixed const & rhs)
 {
-	return (this->_pointFixe <= rhs.getRawBits());
+	return (this->toFloat() <= rhs.toFloat());
 }
 
 bool Fixed::operator<(Fixed const & rhs)
 {
-	return (this->_pointFixe < rhs.getRawBits());
+	return (this->toFloat() < rhs.toFloat());
 }
 
 bool Fixed::operator>(Fixed const & rhs)
 {
-	return (this->_pointFixe > rhs.getRawBits());
+	return (this->toFloat() > rhs.toFloat());
 }
 
 Fixed Fixed::operator+(Fixed const & rhs) const
 {
-	return (Fixed(this->_pointFixe + rhs.getRawBits()));
+	return (Fixed(this->toFloat() + rhs.toFloat()));
 }
 
 Fixed Fixed::operator-(Fixed const & rhs) const
 {
-	return (Fixed(this->_pointFixe - rhs.getRawBits()));
+	return (Fixed(this->toFloat() - rhs.toFloat()));
 }
 
 Fixed Fixed::operator*(Fixed const & rhs) const
 {
-	return (Fixed(this->_pointFixe * rhs.getRawBits()));
+	return (Fixed(this->toFloat() * rhs.toFloat()));
 }
 
 Fixed Fixed::operator/(Fixed const & rhs) const
 {
-	return (Fixed(this->_pointFixe / rhs.getRawBits()));
+	return (Fixed(this->toFloat() / rhs.toFloat()));
 }
 
 
@@ -135,6 +135,10 @@ Fixed Fixed::operator ++ (int)
     ++(this->_pointFixe); // use the prefix operator to perform the increment
     return tmp; // return the temporary
 }
+
+
+
+
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 {
 	o << rhs.toFloat();
