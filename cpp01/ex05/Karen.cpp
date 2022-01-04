@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 00:20:39 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/23 17:36:40 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/24 00:16:46 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,25 @@ void Karen::error( void )
 	std::cout << "This is unacceptable, I want to speak to the manager now." << std::endl;
 }
 
+int	Karen::findLevel(std::string input)
+{
+	std::string tab[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int i = 0;
+	while (i < 4)
+	{
+		if (tab[i] == input)
+			return (i);
+		i++;
+	}
+	return(-1);
+}
+
 void Karen::complain( std::string level )
 {
-	std::map<std::string,void (Karen::*) (void)> mymap;
-  	std::map<std::string,void (Karen::*) (void)>::iterator it;
+	int ret;
+	ret = Karen::findLevel(level);
+	void (Karen::* ptfptr[4]) (void) = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
 
-	mymap["DEBUG"] = &Karen::debug;
-	mymap["INFO"] = &Karen::info;
-	mymap["WARNING"] = &Karen::warning;
-	mymap["ERROR"] = &Karen::error;
-	
-	it = mymap.find(level);
-	if (it != mymap.end())
-		(this->*(it->second))();
+	if (ptfptr[ret])
+		(this->*ptfptr[ret])();
 }

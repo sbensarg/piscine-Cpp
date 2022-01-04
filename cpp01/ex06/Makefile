@@ -1,11 +1,11 @@
-NAME = Karen-filter
+NAME = karenFilter
 SRCS = main.cpp Karen.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = clang++
-
+HEADERS = Karen.hpp
 all: $(NAME)
 
-$(NAME): $(SRCS)
+$(NAME): $(SRCS) $(HEADERS)
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:

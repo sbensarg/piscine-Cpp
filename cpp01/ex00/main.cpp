@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:54:48 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/20 16:59:48 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/24 01:04:11 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 int main(void)
 {
-	Zombie *del;
+	Zombie *z1;
 
-	del = newZombie("heap");
+	z1 = newZombie("heap");
+	z1->announce();
 	randomChump("stack");
-	delete del;
+	delete z1;
 };

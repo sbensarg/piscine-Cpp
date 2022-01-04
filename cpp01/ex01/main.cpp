@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:54:48 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/20 22:16:14 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/23 23:18:19 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,8 @@ int main(void)
 {
 	Zombie *ret;
 		
-	ret = zombieHorde(2, "sara");
-	
-	for (int i = 0 ; i != 2 ; i++)
-	{
-    	ret[i].announce();
-	}
+	ret = zombieHorde(4, "sara");
+	for (int i = 0 ; i < 4 ; i++)
+		ret[i].announce();
 	delete [] ret;
 };

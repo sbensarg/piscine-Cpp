@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 00:20:39 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/23 17:48:48 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/24 00:18:43 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,13 @@ void Karen::error( void )
 
 int	Karen::findLevel(std::string input)
 {
-	std::string s1 = "DEBUG";
-	std::string s2 = "INFO";
-	std::string s3 = "WARNING";
-	std::string s4 = "ERROR";
-	if (!input.compare(s1) || !input.compare(s2) || !input.compare(s3)  || !input.compare(s4))
+	std::string tab[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int i = 0;
+	while (i < 4)
 	{
-		std::map<std::string,int> mymap;
-		std::map<std::string,int>::iterator it;
-		mymap["DEBUG"] = 1;
-		mymap["INFO"] = 2;
-		mymap["WARNING"] = 3;
-		mymap["ERROR"] = 4;
-		it = mymap.find(input);
-		if (it != mymap.end())
-			return (it->second);
+		if (tab[i] == input)
+			return (i);
+		i++;
 	}
 	return(-1);
 }
@@ -68,25 +60,15 @@ void Karen::complain( std::string level)
 {
 	switch (Karen::findLevel(level))
 	{
-	case 1:
+	case 0:
 		Karen::debug();
+	case 1:
 		Karen::info();
-		Karen::warning();
-		Karen::error();
-		break;
 	case 2:
-		Karen::info();
 		Karen::warning();
-		Karen::error();
-		break;
 	case 3:
-		Karen::warning();
 		Karen::error();
 		break;
-	case 4:
-		Karen::error();
-		break;
-	
 	default:
 		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 		break;

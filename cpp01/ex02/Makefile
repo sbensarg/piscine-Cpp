@@ -1,4 +1,4 @@
-NAME = Unnecessary-violence
+NAME = ex02
 SRCS = main.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = clang++

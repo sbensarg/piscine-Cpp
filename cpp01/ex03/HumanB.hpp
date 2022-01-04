@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:06:21 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/23 05:37:36 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/24 00:20:40 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ public:
 	void setWeapon(Weapon &w);
 	void attack();
 };
-
-
 
 #endif

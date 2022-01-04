@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:56:30 by sbensarg          #+#    #+#             */
-/*   Updated: 2021/12/20 22:11:44 by sbensarg         ###   ########.fr       */
+/*   Updated: 2021/12/24 00:27:22 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ public:
 	Zombie();
 	Zombie(std::string name);
 	~Zombie();
-	Zombie setName(std::string& n);
+	void setName(std::string& n);
 	void announce(void);
 	
 };
-Zombie* zombieHorde(int N, std::string name);
+Zombie*	zombieHorde(int N, std::string name);
 
 #endif
