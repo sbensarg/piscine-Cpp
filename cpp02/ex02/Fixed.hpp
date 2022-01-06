@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 23:59:54 by chicky            #+#    #+#             */
-/*   Updated: 2021/12/29 10:49:55 by chicky           ###   ########.fr       */
+/*   Updated: 2022/01/06 17:30:30 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <cmath>
-#define CHARBIT 8
 
 class Fixed
 {
@@ -45,48 +44,23 @@ public:
 	Fixed operator-(Fixed const & rhs) const;
 	Fixed operator*(Fixed const & rhs) const;
 	Fixed operator/(Fixed const & rhs) const;
-	 // Overload ++ when used as prefix
+	// pre-increment operator
 	Fixed & operator ++ (void);
-	 // Overload ++ when used as postfix
+	// post-increment operator
 	Fixed operator ++ (int);
-	//min The static member function
+	// pre-decrement operator
+	Fixed & operator -- (void);
+	// post-decrement operator
+	Fixed operator -- (int);
 	
-	Fixed static & min(Fixed & nbr1, Fixed & nbr2)
-	{
-		if (nbr1 < nbr2)
-			return(nbr1);
-		else
-			return(nbr2);
-	}
+	Fixed static & min(Fixed & nbr1, Fixed & nbr2);
 
-	Fixed static const & min(Fixed const & nbr1, Fixed const & nbr2)
-	{
-		if (nbr1.toFloat() < nbr2.toFloat())
-			return(nbr1);
-		else
-			return(nbr2);
-	}
+	Fixed static const & min(Fixed const & nbr1, Fixed const & nbr2);
 
-	Fixed static & max(Fixed & nbr1, Fixed & nbr2)
-	{
-		if (nbr1 > nbr2)
-			return(nbr1);
-		else
-			return(nbr2);
-	}
+	Fixed static & max(Fixed & nbr1, Fixed & nbr2);
 
-	Fixed static const & max(Fixed const & nbr1, Fixed const & nbr2)
-	{
-		if (nbr1.toFloat() > nbr2.toFloat())
-			return(nbr1);
-		else
-			return(nbr2);
-	}
-	//min overload function
+	Fixed static const & max(Fixed const & nbr1, Fixed const & nbr2);
 
-	//max
-	//Fixed static & max(Fixed & nbr1, Fixed & nbr2);
-	 
 };
 
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs);

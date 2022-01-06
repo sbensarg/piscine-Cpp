@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 23:59:56 by chicky            #+#    #+#             */
-/*   Updated: 2021/12/29 10:41:42 by chicky           ###   ########.fr       */
+/*   Updated: 2022/01/06 12:41:39 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,27 @@
 
 Fixed::Fixed(void) : _pointFixe(0)
 {
-//	std::cout << "Default constructor called" << std::endl;
+
 }
 
 Fixed::Fixed(int const n)
 {
 	this->_pointFixe = (n << this->_fract);
-	//std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(float const f)
 {
 	this->_pointFixe = roundf((f * (float)(1 << this->_fract)));
-//	std::cout << "Float constructor called " << std::endl;
 }
 
 Fixed::Fixed(Fixed const & src)
 {
-	//std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
 
 Fixed::~Fixed()
 {
-	//std::cout << "Destructor called" << std::endl;
+
 }
 
 float Fixed::toFloat(void) const
@@ -52,7 +49,6 @@ int  Fixed::toInt( void ) const
 
 int Fixed::getRawBits(void) const
 {
-	//std::cout << "getRawBits member function called" << std::endl;
 	return this->_pointFixe;
 }
 
@@ -63,8 +59,6 @@ void Fixed::setRawBits(int const raw)
 
 Fixed & Fixed::operator=(Fixed const & rhs)
 {
-	//std::cout << "Assignation operator called" << std::endl;
-	
 	if (this != &rhs)
 		this->_pointFixe = rhs.getRawBits(); // utiliser la valeur de rhs pour mettre a jour _pointFixe de l'insance courante 
 	return (*this);
@@ -120,7 +114,6 @@ Fixed Fixed::operator/(Fixed const & rhs) const
 	return (Fixed(this->toFloat() / rhs.toFloat()));
 }
 
-
  // Overload ++ when used as prefix
 Fixed & Fixed::operator ++ (void) 
 {
@@ -135,9 +128,50 @@ Fixed Fixed::operator ++ (int)
     ++(this->_pointFixe); // use the prefix operator to perform the increment
     return tmp; // return the temporary
 }
+Fixed & Fixed::operator -- (void) 
+{
+   --this->_pointFixe;
+   return (*this);
+}
 
+Fixed Fixed::operator -- (int) 
+{
+    Fixed tmp(*this);
+    --(this->_pointFixe);
+    return tmp;
+}
 
+Fixed  & Fixed::min(Fixed & nbr1, Fixed & nbr2)
+{
+	if (nbr1 < nbr2)
+		return(nbr1);
+	else
+		return(nbr2);
+}
 
+Fixed const & Fixed::min(Fixed const & nbr1, Fixed const & nbr2)
+{
+	if (nbr1.toFloat() < nbr2.toFloat())
+		return(nbr1);
+	else
+		return(nbr2);
+}
+
+Fixed & Fixed::max(Fixed & nbr1, Fixed & nbr2)
+{
+	if (nbr1 > nbr2)
+		return(nbr1);
+	else
+		return(nbr2);
+}
+
+Fixed const & Fixed::max(Fixed const & nbr1, Fixed const & nbr2)
+{
+	if (nbr1.toFloat() > nbr2.toFloat())
+		return(nbr1);
+	else
+		return(nbr2);
+}
 
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 {
