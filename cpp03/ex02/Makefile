@@ -2,7 +2,7 @@ NAME = fragtrap
 SRCS = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
-CC = g++
+CC = clang++
 
 all: $(NAME)
 

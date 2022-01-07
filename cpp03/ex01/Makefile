@@ -2,7 +2,7 @@ NAME = scavtrap
 SRCS = ClapTrap.cpp ScavTrap.cpp main.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 HEADER = ClapTrap.hpp ScavTrap.hpp
-CC = g++
+CC = clang++
 
 all: $(NAME)
 
