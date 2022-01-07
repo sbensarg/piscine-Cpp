@@ -1,0 +1,67 @@
+Day 04
+
+Sub-typing polymorphism:
+
+Resolution statique de l’appel de fonction , c’est a dire qu’a la compilation je suis deja quelle est la fonction que je vais appeler. 
+
+Class Character
+{
+	public:
+		void sayHello(std::string const & target);
+};
+
+Class Warrior
+{
+	public:
+		void sayHello(std::string const & target);
+};
+
+void Character::sayHello(std::string const & target)
+{
+	std::cout << “hi” << target;
+}
+
+void Warrior::sayHello(std::string const & target)
+{
+	std::cout << “hello” << target
+}
+
+Warrior* a = new Warrior();
+Character* b = new Warrior();
+A->sayHello(“Sara”);
+b->sayHello(“Sara”);
+
+//————————————————————//
+
+Class Character
+{
+	public:
+		virtual void sayHello(std::string const & target);
+};
+
+Class Warrior
+{
+	public:
+		virtual void sayHello(std::string const & target);
+};
+
+void Character::sayHello(std::string const & target)
+{
+	std::cout << “hi” << target;
+}
+ (
+void Warrior::sayHello(std::string const & target)
+{
+	std::cout << “hello” << target
+}
+
+Grace a virtual la resolution de l’apple de functions va devenir dynamique elle va être faite a l’execution (utilisation de comportement de type reel).
+méthode : c’est une fonction membre dont la resolution va être dynamique.
+Function membre virtuel == méthode 
+
+Abstract classes and interfaces
+
+
+
+
+

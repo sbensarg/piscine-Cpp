@@ -1,0 +1,23 @@
+Day01
+
+New and delete
+On utilisant newer delete qui vont faire une allocation de memoire, en pratique avec malloc , et ensuite appeler les constructeurs ou destructeurs de vos objets.
+
+References
+alias vers une variable existante.
+pointeur qui est constant, toujours dereference , et jamis nul.
+Ex: int var = 12;
+	int& Ref = var;
+Passage de paramètres par reference : 
+Void byRef(std::string& str)
+{
+}
+Retours Par references
+
+Filestream
+Std::ifstream ==> inpute file stream
+
+Pointer to a member function like  regular pointers to functions, 
+ 
+
+	

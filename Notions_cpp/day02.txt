@@ -1,0 +1,26 @@
+Day 02
+
+Operator overload
+
+Notation  infix 1 + 1 
+Notation prefix + 1 1 (notation fonctionnelle +(1 , 1) , 1.+(1)
+Notation postfix 1 1 + calculi sur stack
+
+
+
+Operator binaire
+    a= b = c = d; 
+- Integer & operator=( Integer const & rhs); // instance Courant qui cera revoiyer  
+- Integer    operator+(Integer const & rhs) const; // const parceque l’instance Courant n’est jamais modifier 
+Operator unaire
+Preincrementation , postincrementation
+
+Std::stream & operator<<(std::stream & o , Integer const & rhs);
+
+Param 1 : une reference sur une instance  de ostream 
+Param2 : ref de la classe( la classe pour l’affichage )
+
+Why argument to a copy constructor must be passed as a reference? 
+
+1. If a function is declared to take a parameter as value of a object, then the copy constructor of the object is called. 
+2. If a function is declared to take a parameter as "pass by reference", the parameter becomes an alias of the object supplied by the caller. No need of a copy constructor! 

@@ -1,0 +1,30 @@
+Namespaces
+::  l’opérateur de resolution de portée or the scope resolution operator is used to identify	a member of a namespace or class.
+class and instance;
+Constructeur : lorsque la classe va être instancier la fonction de construction est appelée
+
+this : Painter qui point sur l’instance courante
+
+Const: signifier au compilateur que cette function ne modifiera jamais l’instance courante de la classe.
+
+public et private permettre de Controller l’encapsulation des membres d’une classe
+Public : accéder depuis l’intérieur et l’extérieur de la classe.
+
+Private: accéder seulement depuis l’interdire de la classe (parfaitement invisible er inaccessible depuis l’extérieur de la classe
+
+Class vs struct
+La difference entre class et struct est que une structure a un Scop par défaut public et la class est un Scop par défaut prive.
+
+Accessors : getter : revoiyer une copie d’un attribue
+Setter : modifier 
+
+Non member attributes and non member functions 
+Variable et des fonctions qui existe au niveau de la classe (static)
+Dans le cas ou on fait reference a un attribut ou une fonction de classe on va utiliser this a l’intérieur et l’instance depuis l’extérieur, et dans le cas d’un attribut ou d’une fonction non_membres on va directement utiliser le nom de la classe :: 
+
+Pointers to members 
+
+
+
+  
+
