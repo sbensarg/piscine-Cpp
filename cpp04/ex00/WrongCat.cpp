@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:42:50 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/03 17:04:47 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/01/14 19:13:48 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ WrongCat::WrongCat(void)
 	std::cout << "WrongCat constructor called" << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const & src)
+WrongCat::WrongCat(WrongCat const & src) : WrongAnimal(src)
 {
 	*this = src;
 }

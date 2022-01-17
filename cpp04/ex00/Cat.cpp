@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:40:05 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/03 16:55:31 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/01/14 19:12:37 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(void)
 	std::cout << "Cat constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const & src)
+Cat::Cat(Cat const & src) : Animal(src)
 {
 	*this = src;
 }

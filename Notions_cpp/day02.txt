@@ -1,5 +1,8 @@
 Day 02
 
+- Ad-hoc Polymorphisme
+aussi appler surcharge du fonction (overload) : definir pleusieur de meme nom mais pronanat des params diffireant et ca cava vous permettre de specialiser le traitement d'une fonction en fonction de ces entrer.
+
 Operator overload
 
 Notation  infix 1 + 1 

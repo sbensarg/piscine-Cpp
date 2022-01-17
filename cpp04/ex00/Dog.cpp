@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:38:27 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/03 16:56:42 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/01/14 19:13:10 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog(void)
 	std::cout << "Dog constructor called" << std::endl;
 }
 
-Dog::Dog(Dog const & src)
+Dog::Dog(Dog const & src) :  Animal(src)
 {
 	*this = src;
 }

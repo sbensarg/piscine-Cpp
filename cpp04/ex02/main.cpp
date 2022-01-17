@@ -6,7 +6,7 @@
 /*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:29:00 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/15 20:19:48 by chicky           ###   ########.fr       */
+/*   Updated: 2022/01/15 21:01:17 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,16 @@
 int main()
 {
 	std::cout << "/** Simple test" << std::endl;
+
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-
+	/**
+	const Animal* meta = new Animal(); // invalid (objet de type class abstraite non autorise) 
+	meta->makeSound(); // pure virtual member function
+	**/
 	delete j;//should not create a leak
 	delete i;
+	
 	std::cout << "**/" << std::endl;
 	
 	std::cout << "/** copy constructor test" << std::endl;

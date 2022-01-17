@@ -1,8 +1,8 @@
-NAME = ex00
-SRCS = Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp main.cpp 
+NAME = ex01
+SRCS = Animal.cpp Cat.cpp Dog.cpp Brain.cpp main.cpp 
 FLAGS = -Wall -Wextra -Werror -std=c++98
-CC = clang++
-HEADER = Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp WrongAnimal.hpp
+CC = g++
+HEADER = Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 all: $(NAME)
 
 $(NAME): $(SRCS)

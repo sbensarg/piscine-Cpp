@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/07 01:05:52 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/15 19:32:54 by chicky           ###   ########.fr       */
+/*   Created: 2022/01/03 15:30:31 by sbensarg          #+#    #+#             */
+/*   Updated: 2022/01/15 20:48:34 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-#define BRAIN_H
-
+#ifndef ANIMAL_H
+# define ANIMAL_H
 # include <iostream>
 
 # define RED   "\x1B[31m"
@@ -24,16 +23,19 @@
 # define WHT   "\x1B[37m"
 # define RESET "\x1B[0m"
 
-class Brain
+class Animal
 {
-private:
-	std::string ideas[100];
+protected:
+	std::string _type;
 public:
-	Brain(void); // Canonical
-	Brain(Brain const & src); // Canonical
-	virtual ~Brain(); // Canonical
-	Brain & operator=(Brain const & rhs); // Canonical
+	Animal(void); // Canonical
+	Animal(Animal const & src); // Canonical
+	virtual ~Animal(); // Canonical
+	Animal & operator=(Animal const & rhs); // Canonical
+	std::string getType(void) const;
+	virtual void makeSound(void) const = 0; // methode pure 
 };
+
 
 
 #endif

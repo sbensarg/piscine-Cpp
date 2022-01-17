@@ -61,6 +61,27 @@ Function membre virtuel == méthode
 
 Abstract classes and interfaces
 
+methode pure
+example
+class ACharacter
+{
+   public: 
+   	virtual void attack(std::string const & target) = 0; // methode pure : les consequences de cette methode (1. la methode on ne peut pas l'implementer, 2.la classe on ne va pas pouvoir l'instancier), elle va donc devenir abstraite.
+};
+- A class is made abstract by declaring at least one of its functions as pure virtual function. A pure virtual function is specified by placing "= 0" in its declaration.
+- An interface class contains only a virtual destructor and pure virtual functions.
+
+Shallow Copy and Deep Copy
+
+In general, if the variables of an object have been dynamically allocated then it is required to do a Deep Copy in order to create a copy of the object.
+
+in shallow copy constructor. Both objects will point to same memory location.
+
+Deep copy allocates separate memory for copied information. So the source and copy are different. Any changes made in one memory location will not affect copy in the other location. When we allocate dynamic memory using pointers we need user defined copy constructor. Both objects will point to different memory locations.
+
+
+
+
 
 
 

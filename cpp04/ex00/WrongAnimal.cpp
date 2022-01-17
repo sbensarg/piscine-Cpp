@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:46:45 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/03 17:04:28 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/01/14 19:13:28 by chicky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ WrongAnimal::WrongAnimal(void)
 	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const & src)
+WrongAnimal::WrongAnimal(WrongAnimal const & src) 
 {
 	*this = src;
 }
