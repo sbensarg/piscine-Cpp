@@ -1,0 +1,65 @@
+Type conversion
+
+C++ allows us to convert data of one type to that of another. This is known as type conversion.
+
+There are two types of type conversion in C++.
+
+Implicit Conversion (done automatically done by the compiler)
+Explicit Conversion (also known as Type Casting) (When the user manually changes data from one type to another)
+
+Data Loss During Conversion
+long doube->double->float->long->int->short->char
+		<- no data loss
+		-> data loss
+
+There are three major ways in which we can use explicit conversion in C++. They are:
+
+- C-style type casting (also known as cast notation)
+- Function notation (also known as old C++ style type casting)
+- Type conversion operators
+
+ // initializing a double variable
+    double num_double = 3.56;
+    cout << "num_double = " << num_double << endl;
+
+    // C-style conversion from double to int
+    int num_int1 = (int)num_double;
+    cout << "num_int1   = " << num_int1 << endl;
+
+    // function-style conversion from double to int
+    int num_int2 = int(num_double);
+    cout << "num_int2   = " << num_int2 << endl;
+* Type Conversion Operators
+- static_cast
+- dynamic_cast
+- const_cast
+- reinterpret_cast
+
+* Type reinterpretation
+
+la valeur de base apres conversion garde les memes bites dans le meme ordre il n'y a pas eu réellement de convertion pandant le cast.
+
+permettre de interpréter des adresses d'un type plus précises vers un type plus generique et inversement
+
+* Static cast
+This is the simplest type of cast which can be used. It is a compile time cast
+
+ float f = 3.5;
+    int a = f; // this is how you do in C
+    int b = static_cast<int>(f);
+    cout << b;
+* Dynamique cast
+- le seul cast avoir lieu au run time (a l'execution) 
+- le dynamique casque ne va fonctionner que dans le cas d'une instance polymorfique
+- le dynamique casque va pouvoir fonctionner uniquemment sur des cast de pointeur ou de reference.
+* Reinterpret cast
+
+reinterpreter n'importe quel adresse vers n'import quel autre adresse
+
+*Const cast
+faire une transformation de qualifieur de type
+
+
+
+
+
