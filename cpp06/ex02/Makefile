@@ -1,8 +1,8 @@
-NAME = convert
-SRCS = Cnv_scalar_types.cpp main.cpp
-FLAGS = -Wall -Wextra -Werror -std=c++98
+NAME = dynamic_cast
+SRCS = main.cpp
+FLAGS = -Wall -Wextra -Werror -Wno-unused -std=c++98 
 CC = clang++
-HEADER = Cnv_scalar_types.hpp
+HEADER =
 all: $(NAME)
 
 $(NAME): $(SRCS) $(HEADER)

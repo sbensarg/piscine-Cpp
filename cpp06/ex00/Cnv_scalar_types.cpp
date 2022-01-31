@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:12:47 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/30 22:42:13 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/01/31 12:36:19 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ Cnv_scalar_types & Cnv_scalar_types::operator=(Cnv_scalar_types const & rhs)
 	this->_v = rhs._v;
 	return (*this);
 }
-
 
 std::string const Cnv_scalar_types::Getv(void) const
 {
