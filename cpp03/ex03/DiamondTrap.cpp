@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:25:23 by chicky            #+#    #+#             */
-/*   Updated: 2022/01/02 22:36:23 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 13:31:49 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ DiamondTrap::DiamondTrap(std::string n)
 	std::cout << "DiamondTrap " << this->_name <<" has been created !" << std::endl;
 }
 
+DiamondTrap::DiamondTrap(DiamondTrap const & src) : FragTrap(src), ScavTrap(src)
+{
+	this->_name = src._name;
+}
+
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << "DiamondTrap " << this->_name << " has been destroyed !" << std::endl;
@@ -40,9 +45,9 @@ void DiamondTrap::attack(std::string const & target)
 DiamondTrap & DiamondTrap::operator=(DiamondTrap const & rhs)
 {
 	std::cout << "Assignation operator called" << std::endl;
-
-	(void)rhs;
-
+	FragTrap::operator=(rhs);
+	ScavTrap::operator=(rhs);
+	this->_name = rhs._name;
 	return (*this);
 }
 

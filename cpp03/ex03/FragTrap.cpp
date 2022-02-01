@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 16:44:47 by chicky            #+#    #+#             */
-/*   Updated: 2022/01/02 22:29:36 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 13:26:07 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ FragTrap::FragTrap(std::string n)
 	std::cout << "FragTrap " << this->_name <<" has been created !" << std::endl;
 }
 
+FragTrap::FragTrap(FragTrap const & src) : ClapTrap(src)
+{
+	
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap " << this->_name << " has been destroyed !" << std::endl;
@@ -37,9 +42,7 @@ FragTrap::~FragTrap()
 FragTrap & FragTrap::operator=(FragTrap const & rhs)
 {
 	std::cout << "FragTrap Assignation operator called" << std::endl;
-
-	(void)rhs;
-
+	ClapTrap::operator=(rhs);
 	return (*this);
 }
 

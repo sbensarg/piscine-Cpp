@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 22:38:16 by chicky            #+#    #+#             */
-/*   Updated: 2022/01/02 16:42:48 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 13:24:51 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ ClapTrap::~ClapTrap()
 ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	
-	(void)rhs;
-		
+	this->_name = rhs._name;
+	this->_attack_damage = rhs._attack_damage;
+	this->_energy_points = rhs._attack_damage;
+	this->_hitpoints = rhs._hitpoints;
 	return (*this);
 }
 
