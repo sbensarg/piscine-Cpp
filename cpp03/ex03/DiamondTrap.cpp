@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:25:23 by chicky            #+#    #+#             */
-/*   Updated: 2022/02/01 13:31:49 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:26:00 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ DiamondTrap::DiamondTrap(std::string n)
 DiamondTrap::DiamondTrap(DiamondTrap const & src) : FragTrap(src), ScavTrap(src)
 {
 	this->_name = src._name;
+	ClapTrap::_name = src.ClapTrap::_name;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -48,6 +49,7 @@ DiamondTrap & DiamondTrap::operator=(DiamondTrap const & rhs)
 	FragTrap::operator=(rhs);
 	ScavTrap::operator=(rhs);
 	this->_name = rhs._name;
+	this->ClapTrap::_name = rhs.ClapTrap::_name;
 	return (*this);
 }
 
