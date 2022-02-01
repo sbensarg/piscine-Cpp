@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:38:27 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/15 20:44:47 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 12:54:39 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Dog::Dog(void)
 Dog::Dog(Dog const & src) : Animal(src)
 {
 	this->attr_d = new Brain();
-	*this = src;
 	std::cout <<  MAG "Dog copy constructor called" RESET << std::endl;
 }
 
@@ -36,7 +35,8 @@ Dog::~Dog()
 
 Dog & Dog::operator=(Dog const & rhs)
 {
-	(void)rhs;	
+	Animal::operator=(rhs);
+	this->attr_d = rhs.attr_d;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 21:21:14 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/16 23:09:34 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/01 20:18:45 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ AMateria::~AMateria()
 
 AMateria & AMateria::operator=(AMateria const & rhs)
 {
-	this->type = rhs.getType();
+	this->type = rhs.type;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 22:51:52 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/17 21:54:05 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/01 20:22:39 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice(void) : AMateria("ice")
 {
-	//this->type = "ice";
+
 }
 
 Ice::Ice(Ice const & src) : AMateria(src)

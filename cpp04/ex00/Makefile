@@ -1,7 +1,7 @@
 NAME = ex00
 SRCS = Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp main.cpp 
 FLAGS = -Wall -Wextra -Werror -std=c++98
-CC = g++
+CC = clang++
 HEADER = Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp WrongAnimal.hpp
 all: $(NAME)
 

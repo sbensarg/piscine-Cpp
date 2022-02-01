@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:42:50 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/14 19:13:48 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 12:25:54 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ WrongCat::WrongCat(void)
 
 WrongCat::WrongCat(WrongCat const & src) : WrongAnimal(src)
 {
-	*this = src;
+
 }
 
 WrongCat::~WrongCat()
@@ -29,8 +29,7 @@ WrongCat::~WrongCat()
 
 WrongCat & WrongCat::operator=(WrongCat const & rhs)
 {
-	(void)rhs;
-		
+	WrongAnimal::operator=(rhs);
 	return (*this);
 }
 

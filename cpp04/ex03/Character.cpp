@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 21:45:18 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/17 21:31:07 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/01 20:43:54 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ Character::Character(Character  const & src)
 
 Character::~Character()
 {
-	if (this->a != NULL)
+	for(int i = 0; i < 4; i++)
 	{
-		for(int i = 0; i < 4; i++)
+		if (this->a[i])
 			delete this->a[i];
 	}
 }
@@ -42,16 +42,13 @@ Character::~Character()
 Character & Character::operator=(Character const & rhs)
 {
 	this->_name = rhs._name;
-	if (this->a != NULL)
+	for(int i = 0; i < 4; i++)
 	{
-		for(int i = 0; i < 4; i++)
+		if (this->a[i])
 			delete this->a[i];
 	}
-	else
-	{
-		for(int i = 0; i < 4; i++)
-			this->a[i] = rhs.a[i];
-	}
+	for(int i = 0; i < 4; i++)
+		this->a[i] = rhs.a[i];
 	return (*this);
 }
 

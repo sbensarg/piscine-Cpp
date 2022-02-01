@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 22:52:55 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/17 22:11:33 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/01 20:22:13 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cure::Cure(void) : AMateria("cure")
 {
-	//this->type = "cure";
+	
 }
 
 

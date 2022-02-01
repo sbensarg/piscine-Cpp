@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 21:48:00 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/17 22:04:56 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/01 21:56:49 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,22 @@ MateriaSource::MateriaSource(MateriaSource const & src)
 
 MateriaSource::~MateriaSource()
 {
-	if (this->a != NULL)
+	for(int i = 0; i < 4; i++)
 	{
-		for(int i = 0; i < 4; i++)
+		if (this->a[i])
 			delete this->a[i];
 	}
 }
 
-MateriaSource & MateriaSource::operator=(MateriaSource const & rhs)
+MateriaSource & MateriaSource::operator=(MateriaSource const & rhs) 
 {
-	if (this->a != NULL)
+	for(int i = 0; i < 4; i++)
 	{
-		for(int i = 0; i < 4; i++)
+		if (this->a[i])
 			delete this->a[i];
 	}
-	else
-	{
-		for(int i = 0; i < 4; i++)
-			this->a[i] = rhs.a[i];
-	}
+	for(int i = 0; i < 4; i++)
+		this->a[i] = rhs.a[i];
 	return (*this);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:40:05 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/14 19:12:37 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 12:20:39 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat(void)
 
 Cat::Cat(Cat const & src) : Animal(src)
 {
-	*this = src;
+	
 }
 
 Cat::~Cat()
@@ -30,8 +30,7 @@ Cat::~Cat()
 
 Cat & Cat::operator=(Cat const & rhs)
 {
-	(void)rhs;
-		
+	Animal::operator=(rhs);		
 	return (*this);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chicky <chicky@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:38:27 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/14 19:13:10 by chicky           ###   ########.fr       */
+/*   Updated: 2022/02/01 12:24:59 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Dog::Dog(void)
 
 Dog::Dog(Dog const & src) :  Animal(src)
 {
-	*this = src;
+
 }
 
 Dog::~Dog()
@@ -30,8 +30,7 @@ Dog::~Dog()
 
 Dog & Dog::operator=(Dog const & rhs)
 {
-	(void)rhs;
-		
+	Animal::operator=(rhs);
 	return (*this);
 }
 
