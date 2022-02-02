@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 01:06:03 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/01 13:10:36 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/02 18:33:18 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ Brain::Brain(void)
 
 Brain::Brain(Brain const & src)
 {
-	
 	*this = src;
 }
 
