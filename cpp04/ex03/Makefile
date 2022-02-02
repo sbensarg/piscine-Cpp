@@ -1,6 +1,6 @@
 NAME = ex03
 SRCS = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp 
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 CC = clang++
 HEADER = AMateria.hpp Character.hpp Cure.hpp Ice.hpp IMateriaSource.hpp
 all: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 21:45:18 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/01 20:43:54 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/02 16:47:42 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	if (idx >= 0 && idx < 4)
+	if (idx >= 0 && idx < 4 && a[idx] != NULL)
 		(this->a[idx])->use(target);
 }
 
