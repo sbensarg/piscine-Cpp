@@ -6,28 +6,34 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 19:40:06 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/06 21:26:25 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/08 16:53:50 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+#include <iostream>
 
 int main() {
 	std::cout << "------Simple test------" << std::endl;
-    int arr[5] = {1, 2, 3, 4, 5};
-    Array<int> a(arr, 5);
+    Array<int> a(3);
+	a[0] = 43;
+	a[1] = -1;
+	a[2] = 5;
 	int ret = a.size();
-	std::cout << ret << std::endl;
-	std::cout << arr[1] << std::endl;
+	std::cout << "size: "<< ret << std::endl;
+	std::cout << "a[1]: " << a[1] << std::endl;
 	std::cout << "------test 2------" << std::endl;
 	int * b = new int();
 	std::cout << *b << std::endl;
+	
 	std::cout << "------- test with index out of bounds------" << std::endl;
 	try
 	{
-		char tab[5] = {'a', 'b', 'c', 'e', 'f'};
-    	Array<char> b(tab, 5);
-		std::cout << b[7] << std::endl;
+    	Array<char> b(3);
+		b[0] = 'a';
+		b[1] = 'b';
+		b[2] = 'c';
+		std::cout << b[-2] << std::endl;
 	}
 	catch(std::exception e)
 	{
@@ -37,7 +43,7 @@ int main() {
 	Array<int> c(a);
 	for (unsigned int i = 0; i < c.size(); i++)
 	{
-		std::cout << c[i] << " ";
+		std::cout << "c["<<i<<"]= " << c[i] << " ";
 	}
 	
     return 0;

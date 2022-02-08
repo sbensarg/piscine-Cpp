@@ -6,12 +6,13 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 18:37:19 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/06 21:26:33 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/08 16:55:56 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_H
 #define ARRAY_H
+
 #include <iostream>
 template < typename T >
 
@@ -22,62 +23,51 @@ private:
 	unsigned int s;
 public:
 	Array(void);
-	Array(T arr[], unsigned int n);
-	Array(T const & src);
-	T & operator=(T const & rhs);
-	T const & operator[] (unsigned int index); // indexing operation
+	Array(unsigned int n);
+	Array(Array<T> const & src);
+	Array<T> & operator=(Array<T> const & rhs);
+	T & operator[] (unsigned int index); // indexing operation
 	unsigned int size(void);
-	//~Array();
 };
 
 template <typename T>
 Array<T>::Array(void)
 {
 	ptr = new T[0];
+	s = 0;
 }
 
 template <typename T>
-Array<T>::Array(T arr[], unsigned int n)
+Array<T>::Array(unsigned int n)
 {
 	ptr = new T[n];
 	s = n;
-	for (unsigned int i = 0; i < s; i++)
-	{
-		ptr[i] = arr[i];
-	}
 }
 
 template <typename T>
-Array<T>::Array(T const & src)
+Array<T>::Array(Array<T> const & src)
 {
-	T *copy = new T[s];
-	for (unsigned int i = 0; i < s; i++)
-	{
-		copy[i] = src[i];
-	}
-	src = copy;
+	*this = src;
 }
 
 template <typename T>
-T & Array<T>::operator=(T const & rhs)
+Array<T> & Array<T>::operator=(Array<T> const & rhs)
 {
-	if (this != rhs)
+	s = rhs.s;
+	ptr = new T[s];
+	for (unsigned int i = 0; i < s; i++)
 	{
-		T *copy = new T[s];
-		for (unsigned int i = 0; i < s; i++)
-		{
-			copy[i] = rhs[i];
-		}
+		ptr[i] = (rhs).ptr[i];
 	}
 	return (*this);
 }
 
 template <typename T>
-T const & Array<T>::operator[] (unsigned int index)
+T & Array<T>::operator[] (unsigned int index)
 {
 	if (index >= s)
 		throw std::exception();
-	return *(ptr + index);
+	return ptr[index];
 }
 
 template <typename T>
@@ -85,12 +75,4 @@ unsigned int Array<T>::size(void)
 {
 	return (s);
 }
-
-// template <typename T>
-
-// Array<T>::~Array()
-// {
-// 	delete [] ptr;
-// }
-
 #endif
