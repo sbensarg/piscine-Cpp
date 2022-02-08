@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 01:21:02 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/22 22:24:54 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/07 16:44:56 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ class Form
 private:
 	std::string const	_nameform;
 	bool 				_is_signed;
-	int					_grade_s;
-	int					_grade_e;	
+	int			const	_grade_s;
+	int			const	_grade_e;		
 public:
 	Form(void); // Canonical
-	Form(std::string const n_form, int const g_s, int const g_e); 
+	Form(std::string n_form, int g_s, int g_e); 
 	virtual ~Form(); // Canonical
 	Form(Form const & src); // Canonical
 	Form & operator=(Form  const &  rhs);  // Canonical

@@ -6,28 +6,23 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 01:21:10 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/20 01:06:21 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/07 16:28:53 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(void)
+Form::Form(void) : _nameform("default"), _is_signed(false),  _grade_s(1), _grade_e(1)
 {
 	
 }
 
-Form::Form(std::string const n_form, int const g_s, int const g_e) : _nameform(n_form), _is_signed(false)
+Form::Form(std::string n_form, int g_s, int g_e) : _nameform(n_form), _is_signed(false), _grade_s(g_s), _grade_e(g_e)
 {
-	if (g_s < 1 || g_e < 1)
-		throw Bureaucrat::GradeTooHighException();
-	else if (g_s > 150 || g_e > 150)
-		throw Bureaucrat::GradeTooLowException();
-	else
-	{
-		this->_grade_s = g_s;
-		this->_grade_e = g_e;
-	}
+	if (_grade_s < 1 || _grade_e < 1)
+		throw Form::GradeTooHighException();
+	else if (_grade_s > 150 || _grade_e > 150)
+		throw Form::GradeTooLowException();
 }
 
 Form::~Form()
@@ -35,7 +30,7 @@ Form::~Form()
 	
 }
 
-Form::Form(Form const & src)
+Form::Form(Form const & src) : _nameform(src._nameform), _is_signed(false), _grade_s(src._grade_s), _grade_e(src._grade_e)
 {
 	*this = src;
 }

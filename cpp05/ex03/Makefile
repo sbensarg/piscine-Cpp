@@ -1,7 +1,7 @@
 NAME = ex03
 SRCS = Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp main.cpp 
 FLAGS = -Wall -Wextra -Werror -std=c++98
-CC = g++
+CC = clang++
 HEADER = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp Intern.hpp
 all: $(NAME)
 
