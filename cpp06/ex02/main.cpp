@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 16:25:24 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/31 19:04:00 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/09 15:35:16 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,20 @@ Base * generate(void)
 
 void identify(Base* p)
 {
-	if (dynamic_cast<A *>(p))
+	A * a = dynamic_cast<A *>(p);
+	if (a == NULL)
+		std::cout << "Conversion is NOT Ok!" << std::endl;
+	else
 		std::cout << "this is a derived class {A}" << std::endl;
-	if (dynamic_cast<B *>(p))
+	B * b = dynamic_cast<B *>(p);
+	if (b == NULL)
+		std::cout << "Conversion is NOT Ok!" << std::endl;
+	else
 		std::cout << "this is a derived class {B}" << std::endl;
-	if (dynamic_cast<C *>(p))
+	C * c =dynamic_cast<C *>(p);
+	if (c == NULL)
+		std::cout << "Conversion is NOT Ok!" << std::endl;
+	else
 		std::cout << "this is a derived class {C}" << std::endl;
 }
 

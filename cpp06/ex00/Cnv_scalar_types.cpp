@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:12:47 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/31 12:36:19 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/08 17:17:11 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,7 @@ Cnv_scalar_types::Cnv_scalar_types(void)
 
 Cnv_scalar_types::Cnv_scalar_types(std::string v) : _v(v)
 {
-	// for(unsigned int i = 0; i < this->_v.length() ; i++)
-	// {
-	// 	if ((this->_v[i] >= '0' && this->_v[i] <= '9') || this->_v[i] == '.' || this->_v[i] == 'f')
-	// 	{
-	// 		if (this->_v[i] == '.')
-	// 		{
-	// 			flag = 1;
-	// 			for(unsigned int j = i; j < this->_v.length(); j++)
-	// 			{
-	// 				if (this->_v[j] == 'f')
-	// 					flag = 2;
-	// 			}
-	// 		}
-	// 	}
-	// 	else
-	// 		flag = -1;
-	// }
+
 }
 
 Cnv_scalar_types::Cnv_scalar_types(Cnv_scalar_types const & src)
@@ -52,11 +36,6 @@ Cnv_scalar_types & Cnv_scalar_types::operator=(Cnv_scalar_types const & rhs)
 {
 	this->_v = rhs._v;
 	return (*this);
-}
-
-std::string const Cnv_scalar_types::Getv(void) const
-{
-	return (this->_v);
 }
 
 Cnv_scalar_types::operator char()

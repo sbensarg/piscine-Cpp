@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:12:16 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/01/30 22:34:52 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/08 17:16:46 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ public:
 	Cnv_scalar_types(Cnv_scalar_types const & src);
 	~Cnv_scalar_types();
 	Cnv_scalar_types & operator=(Cnv_scalar_types const & rhs);
-	int findstr(std::string input);
-	void print( std::string level);
-	std::string const Getv(void) const;
-	void Setv(std::string s);
 	operator char();
 	operator int();
 	operator float();
