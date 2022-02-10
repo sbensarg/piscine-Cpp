@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 19:40:06 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/08 16:53:50 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/10 11:58:02 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main() {
 	{
 		std::cout << "index is out of bounds!!" << std::endl;	
 	}
-	std::cout << "------copy const------" << std::endl;
+	std::cout << "------copy constructor------" << std::endl;
 	Array<int> c(a);
 	for (unsigned int i = 0; i < c.size(); i++)
 	{

@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 18:37:19 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/08 16:55:56 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/10 11:57:38 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ public:
 template <typename T>
 Array<T>::Array(void)
 {
-	ptr = new T[0];
+	ptr = new T[0]();
 	s = 0;
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n)
 {
-	ptr = new T[n];
+	ptr = new T[n]();
 	s = n;
 }
 
