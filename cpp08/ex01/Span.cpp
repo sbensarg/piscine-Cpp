@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 18:48:57 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/12 15:13:22 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/14 16:18:55 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,16 +80,10 @@ int Span::longestSpan()
 	return (max);
 }
 
-unsigned int Span::RandomNumber() 
+void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-	return (std::rand()%100); 
-}
-
-void Span::addRange()
-{
-	std::srand ( unsigned ( std::time(0)));
-	for (unsigned int i = 0; i < this->N; i++)
+	for (std::vector<int>::iterator it = begin; it != end; ++it)
 	{
-		addNumber(Span::RandomNumber());
+		addNumber(*it);
 	}
 }
