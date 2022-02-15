@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 18:47:42 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/14 16:18:59 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/15 16:30:44 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Span : public std::vector<int>
 {
 private:
-
 	unsigned int N;
 public:
 	Span(void);

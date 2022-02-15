@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 19:49:06 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/14 16:18:28 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/15 16:34:46 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int RandomNumber () { return (std::rand()%100); }
 int main()
 {
 	std::srand ( unsigned ( std::time(0) ) );
-	Span sp = Span(9);
-	std::vector<int> myvector (9);
+	Span sp = Span(20);
+	std::vector<int> myvector (20);
 	try
 	{
 		std::generate (myvector.begin(), myvector.end(), RandomNumber);

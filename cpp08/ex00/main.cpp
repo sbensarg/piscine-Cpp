@@ -6,7 +6,7 @@
 /*   By: sbensarg <sbensarg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 19:44:11 by sbensarg          #+#    #+#             */
-/*   Updated: 2022/02/11 18:16:51 by sbensarg         ###   ########.fr       */
+/*   Updated: 2022/02/15 16:24:56 by sbensarg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,4 @@ int main()
 	{
 		std::cerr << "list: Element not found!!\n";
 	}
-	
-	
-	
 }
